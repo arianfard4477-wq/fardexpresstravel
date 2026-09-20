@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="گشت شهری باکو با Fard Express Travel؛ جاذبه های تاریخی، فرهنگی، طبیعی و خرید آذربایجان.">
+  <title>گشت شهری باکو | Fard Express Travel</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#075a66">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=2">
+  <style>
+    .tours-page { background: #fffdf8; min-height: 100vh; }
+    .tours-hero { background: #075a66; color: white; padding: 92px 0 82px; }
+    .tours-hero h1 { font-size: clamp(44px, 6vw, 76px); line-height: 1.1; margin: 0 0 18px; letter-spacing: -2px; }
+    .tours-hero h1 em { color: #e65f4c; font-style: normal; }
+    .tours-hero p { max-width: 570px; color: #d7e5df; font-size: 14px; margin: 0; }
+    .tours-main { padding: 72px 0 110px; }
+    .tours-back { color: #075a66; display: inline-flex; gap: 12px; align-items: center; text-decoration: none; font-size: 12px; margin-bottom: 38px; }
+    .tours-back span { font-size: 20px; }
+    .tour-intro { display: flex; justify-content: space-between; align-items: end; margin-bottom: 64px; }
+    .tour-intro h2 { font-size: clamp(34px, 4vw, 54px); line-height: 1.2; margin: 0; letter-spacing: -1px; }
+    .tour-intro h2 em { color: #e65f4c; font-style: normal; }
+    .tour-intro p { color: #657277; font-size: 13px; max-width: 330px; margin: 0; }
+
+    .tour-category { margin-top: 76px; }
+    .tour-category:first-of-type { margin-top: 0; }
+    .category-heading { display: flex; align-items: center; gap: 16px; margin-bottom: 26px; border-bottom: 1px solid #d9dcd5; padding-bottom: 14px; }
+    .category-heading span { font: 700 12px 'DM Sans', sans-serif; color: white; background: #e65f4c; padding: 7px 12px; }
+    .category-heading h3 { font-size: 17px; margin: 0; }
+    .category-heading span { display: grid; place-items: center; padding: 9px; line-height: 0; }
+    .category-heading span svg { width: 20px; height: 20px; fill: none; stroke: #fff; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+    .category-heading b { margin-right: auto; font: 500 12px 'DM Sans', sans-serif; color: #8a9597; }
+
+    /* Gallery tiles: uniform 4:5 frame, photo fills it, name sits on a gradient */
+    .tour-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .tour-card { position: relative; overflow: hidden; aspect-ratio: 4 / 5; background: #17252b; min-width: 0; margin: 0; }
+    .tour-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform .6s ease; }
+    .tour-card:after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(8,24,30,.85) 0%, rgba(8,24,30,.35) 32%, transparent 55%); pointer-events: none; }
+    .tour-card:hover img { transform: scale(1.05); }
+    .tour-card figcaption { position: absolute; right: 0; left: 0; bottom: 0; z-index: 1; padding: 18px 18px 16px; color: #fff; font: 700 16px/1.35 'DM Sans', sans-serif; direction: ltr; text-align: right; text-shadow: 0 1px 8px rgba(0,0,0,.35); }
+    .tour-card figcaption:before { content: ''; display: block; width: 22px; height: 2px; background: #e65f4c; margin: 0 0 10px auto; }
+
+    /* Framing for landscape photos whose subject is off-centre */
+    .tour-card img[src*="dagustu"] { object-position: 80% center; }
+    .tour-card img[src*="ateshgah"] { object-position: 20% center; }
+    .tour-card img[src*="qobustan"] { object-position: 80% center; }
+    .tour-card img[src*="yanardag"] { object-position: 45% center; }
+    .tour-card img[src*="edebiyat"] { object-position: 60% center; }
+    .tour-card img[src*="medeniyyeti%20cay"] { object-position: 60% center; }
+
+    .tour-note { border-right: 2px solid #e65f4c; color: #657277; font-size: 12px; line-height: 2; padding: 10px 16px; margin-top: 72px; }
+    .photo-credit { margin: 10px 0 0; font-size: 10px; color: #8a9597; }
+    .photo-credit a { color: inherit; }
+    .tour-cta { margin-top: 40px; background: #eae8de; padding: 34px 38px; display: flex; align-items: center; justify-content: space-between; gap: 25px; }
+    .tour-cta h2 { font-size: 28px; margin: 0; }
+    .tour-cta p { color: #657277; font-size: 12px; margin: 6px 0 0; }
+    .tour-cta .button { flex: none; }
+
+    @media (max-width: 1000px) { .tour-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; } }
+    @media (max-width: 800px) {
+      .tours-hero { padding: 70px 0 62px; }
+      .tours-main { padding: 55px 0 80px; }
+      .tour-intro { display: block; margin-bottom: 44px; }
+      .tour-intro p { margin-top: 18px; }
+      .tour-category { margin-top: 56px; }
+      .tour-card figcaption { font-size: 14px; padding: 14px 14px 12px; }
+      .tour-cta { display: block; padding: 26px; }
+      .tour-cta .button { margin-top: 20px; }
+    }
+    @media (max-width: 600px) { .tour-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; } }
+    @media (max-width: 450px) {
+      .tours-hero h1 { font-size: 44px; }
+      .tour-category { margin-top: 46px; }
+      .category-heading h3 { font-size: 15px; }
+      .tour-card figcaption { font-size: 13px; padding: 12px 12px 11px; }
+      .tour-card figcaption:before { width: 16px; margin-bottom: 7px; }
+      .tour-cta h2 { font-size: 23px; }
+    }
+  </style>
+</head>
+<body class="tours-page">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="c-tower" viewBox="0 0 24 24"><path d="M7 21V8.5a5 5 0 0 1 10 0V21"/><path d="M5.5 21h13"/><path d="M7 8.5 8.2 6h7.6L17 8.5"/><path d="M12 12.5v3"/></symbol>
+  <symbol id="c-modern" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M6 21V11l3.5-3 3.5 3v10"/><path d="M13 21V6.5l4-3.5 0 18"/><path d="M8.5 13.5h2M8.5 17h2"/></symbol>
+  <symbol id="c-flame" viewBox="0 0 24 24"><path d="M12 21c3.6 0 6-2.3 6-5.6 0-3.9-3.6-5.6-4.3-10.4-2 1.6-3.4 3.6-3.4 5.6 0 1.4-1 1.8-1.6 1-.5-.7-.6-1.6-.6-1.6C6.8 11.4 6 13.3 6 15.4 6 18.7 8.4 21 12 21z"/></symbol>
+  <symbol id="c-culture" viewBox="0 0 24 24"><path d="M4.5 8h12v5.5a6 6 0 0 1-12 0z"/><path d="M16.5 9.2h1.9a2.4 2.4 0 0 1 0 4.8h-1.9"/><path d="M3 20.5h15"/><path d="M8 5V3.2M12.5 5V3.2"/></symbol>
+  <symbol id="c-shop" viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12.5H6.2z"/><path d="M8.8 10.5V6.8a3.2 3.2 0 0 1 6.4 0v3.7"/></symbol>
+</svg>
+<header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html#top" aria-label="Fard Express Travel"><span class="brand-mark"><i></i><i></i><i></i></span><span><strong>Fard Express</strong><small>TRAVEL</small></span></a><nav class="main-nav" aria-label="ناوبری اصلی"><a href="index.html#services">خدمات ما</a><a href="index.html#events">رویدادهای باکو</a><a href="index.html#why-us">چرا فرد اکسپرس؟</a><a href="index.html#destinations">باکو را کشف کنید</a><a href="index.html#contact">تماس با ما</a></nav><a class="nav-cta" href="index.html#contact">مشاوره رایگان <span>↗</span></a><button class="menu-toggle" aria-label="باز کردن منو" aria-expanded="false"><span></span><span></span></button></div></header>
+<main>
+  <section class="tours-hero"><div class="container"><div class="eyebrow light"><span></span> باکو را از نزدیک ببینید</div><h1>هر گوشه شهر<br><em>یک داستان.</em></h1><p>گشت های شهری Fard Express Travel، ترکیبی از تاریخ، فرهنگ، طبیعت و زندگی امروز باکو هستند؛ با برنامه ریزی راحت و همراهی تیم محلی.</p></div></section>
+  <section class="tours-main"><div class="container">
+    <a class="tours-back" href="index.html#services"><span>→</span> بازگشت به خدمات</a>
+    <div class="tour-intro"><div><div class="eyebrow"><span></span> پیشنهادهای گشت شهری</div><h2>باکو را<br><em>زندگی کنید.</em></h2></div><p>مقصدها را انتخاب کنید یا اجازه دهید یک برنامه کامل و متناسب با زمان شما طراحی کنیم.</p></div>
+
+    <div class="tour-category"><div class="category-heading"><span><svg viewBox="0 0 24 24"><use href="#c-tower"/></svg></span><h3>شهر قدیم و میراث تاریخی</h3><b>5</b></div><div class="tour-grid">
+      <figure class="tour-card reveal"><img src="gasht%20shahri/web/iceri%20seher.jpg" alt="İçərişəhər" loading="lazy"><figcaption>İçərişəhər</figcaption></figure>
+      <figure class="tour-card reveal"><img src="gasht%20shahri/web/shirvanshahlar%20sarayi.jpg" alt="Şirvanşahlar Sarayı" loading="lazy"><figcaption>Şirvanşahlar Sarayı</figcaption></figure>
+      <figure class="tour-card reveal"><img src="gasht%20shahri/web/qiz%20qalasii.jpg" alt="Qız Qalası" loading="lazy"><figcaption>Qız Qalası</figcaption></figure>
+      <figure class="tour-card reveal"><img src="gasht%20shahri/web/miniatur%20kitab%20muzeyi.jpg" alt="Miniatür Kitab Muzeyi" loading="lazy"><figcaption>Miniatür Kitab Muzeyi</figcaption></figure>
+      <figure class="tour-card reveal"><img src="gasht%20shahri/web/ali%20aga%20vahid%20parki.jpg" alt="Əli Ağa Vahid Parkı" loading="lazy"><figcaption>Əli Ağa Vahid Parkı</figcaption></figure>
+    </div></div>
+
+    <div class="tour-category"><div class="category-heading"><span><svg viewBox="0 0 24 24"><use href="#c-modern"/></svg></span><h3>نمادهای مدرن و چشم انداز شهر</h3><b>4</b></div><div class="tour-grid">
+      <figure class="tour-card reveal"><img src="gasht%20shahri/web/heydar%20aliyev%20merkezi%203.jpg" alt="Heydər Əliyev Mərkəzi" loading="lazy"><figcaption>Heydər Əliyev Mərkəzi</figcaption></figure>
+      <figure class="tour-card reveal"><img src="gasht%20shahri/web/xalca%20muzeyi.jpg" alt="Xalça Muzeyi" loading="lazy"><figcaption>Xalça Muzeyi</figcaption></figure>
+      <figure class="tour-card reveal"><img src="gasht%20shahri/web/dagustu%20park.jpg" alt="Dağüstü Park" loading="lazy"><figcaption>Dağüstü Park</figcaption></figure>
+      <figure class="tour-card reveal"><img src="gasht%20shahri/web/flame%20towers.jpg" alt="Alov qüllələri" loading="lazy"><figcaption>Alov qüllələri</figcaption></figure>
+    </div></div>
+
+    <div class="tour-category"><div class="category-heading"><span><svg viewBox="0 0 24 24"><use href="#c-flame"/></svg></span><h3>طبیعت، آتش و شگفتی های اطراف</h3><b>4</b></div><div class="tour-grid">
+      <figure class="tour-card reveal"><img src="gasht%20shahri/web/ateshgah.jpg" alt="Atəşgah" loading="lazy"><figcaption>Atəşgah</figcaption></figure>
+      <figure class="tour-card reveal"><img src="gasht%20shahri/web/yanardag.jpg" alt="Yanar Dağ" loading="lazy"><figcaption>Yanar Dağ</figcaption></figure>
+      <figure class="tour-card reveal"><img src="gasht%20shahri/web/qobustan.jpg" alt="Qobustan" loading="lazy"><figcaption>Qobustan</figcaption></figure>
+      <figure class="tour-card reveal"><img src="gasht%20shahri/web/seytan%20carxi.jpg" alt="Şeytan çarxı" loading="lazy"><figcaption>Şeytan çarxı</figcaption></figure>
+    </div></div>
+
+    <div class="tour-category"><div class="category-heading"><span><svg viewBox="0 0 24 24"><use href="#c-culture"/></svg></span><h3>فرهنگ، هنر و زندگی آذربایجان</h3><b>6</b></div><div class="tour-grid">
+      <figure class="tour-card reveal"><img src="gasht%20shahri/web/azerbaycan%20medeniyyeti%20cay.jpg" alt="استکان های کمرباریک و قوری چای سنتی آذربایجان" loading="lazy"><figcaption>Azərbaycan mədəniyyəti - Çay</figcaption></figure>
+      <figure class="tour-card reveal"><img src="gasht%20shahri/web/xalca.jpg" alt="Azərbaycan mədəniyyəti - Xalça" loading="lazy"><figcaption>Azərbaycan mədəniyyəti - Xalça</figcaption></figure>
+      <figure class="tour-card reveal"><img src="gasht%20shahri/web/azerbaycan%20milli%20reqsi.jpg" alt="Azərbaycan milli rəqsi" loading="lazy"><figcaption>Azərbaycan milli rəqsi</figcaption></figure>
+      <figure class="tour-card reveal"><img src="gasht%20shahri/web/azerbaycan%20milli%20musiqi.jpg" alt="Azərbaycan milli musiqisi" loading="lazy"><figcaption>Azərbaycan milli musiqisi</figcaption></figure>
+      <figure class="tour-card reveal"><img src="gasht%20shahri/web/mini%20venetsia.jpg" alt="Kiçik Venesiya" loading="lazy"><figcaption>Kiçik Venesiya</figcaption></figure>
+      <figure class="tour-card reveal"><img src="gasht%20shahri/web/edebiyat%20muzeyi.jpg" alt="Nizami Gəncəvi adına Milli Azərbaycan Ədəbiyyatı Muzeyi" loading="lazy"><figcaption>Nizami Gəncəvi adına Milli Azərbaycan Ədəbiyyatı Muzeyi</figcaption></figure>
+    </div></div>
+
+    <div class="tour-category"><div class="category-heading"><span><svg viewBox="0 0 24 24"><use href="#c-shop"/></svg></span><h3>بلوار و خرید</h3><b>8</b></div><div class="tour-grid">
+      <figure class="tour-card reveal"><img src="gasht%20shahri/web/baki%20bulvari.jpg" alt="Bakı Bulvarı" loading="lazy"><figcaption>Bakı Bulvarı</figcaption></figure>
+      <figure class="tour-card reveal"><img src="gasht%20shahri/web/fevvareler%20meydani.jpg" alt="Fəvvarələr Meydanı" loading="lazy"><figcaption>Fəvvarələr Meydanı</figcaption></figure>
+      <figure class="tour-card reveal"><img src="gasht%20shahri/web/nizami%20kucesi.jpg" alt="Nizami küçəsi" loading="lazy"><figcaption>Nizami küçəsi</figcaption></figure>
+      <figure class="tour-card reveal"><img src="gasht%20shahri/web/ganjlik%20mall.jpg" alt="Gənclik Mall" loading="lazy"><figcaption>Gənclik Mall</figcaption></figure>
+      <figure class="tour-card reveal"><img src="gasht%20shahri/web/crescent%20mall%203.jpg" alt="Crescent Mall" loading="lazy"><figcaption>Crescent Mall</figcaption></figure>
+      <figure class="tour-card reveal"><img src="gasht%20shahri/web/28%20mall.jpg" alt="28 Mall" loading="lazy"><figcaption>28 Mall</figcaption></figure>
+      <figure class="tour-card reveal"><img src="gasht%20shahri/web/deniz%20mall.jpg" alt="Dəniz Mall" loading="lazy"><figcaption>Dəniz Mall</figcaption></figure>
+      <figure class="tour-card reveal"><img src="gasht%20shahri/web/park%20bulvar.jpg" alt="Park Bulvar" loading="lazy"><figcaption>Park Bulvar</figcaption></figure>
+    </div></div>
+
+    <div class="tour-note">برنامه گشت را می توان بر اساس تعداد روز، علایق، شرایط سنی و زمان پرواز شما شخصی سازی کرد.</div>
+    <p class="photo-credit">عکس چای: <a href="https://commons.wikimedia.org/wiki/File:Traditional_Azerbaijani_tea_glasses_and_saucers.jpg" target="_blank" rel="noopener">Игорь Улитин / Wikimedia Commons</a>، <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></p>
+    <div class="tour-cta"><div><h2>باکو را با یک برنامه خوب کشف کنید.</h2><p>زمان سفر و مقصدهای مورد علاقه تان را بگویید؛ ما مسیر مناسب را می سازیم.</p></div><a class="button button-primary" href="index.html#contact">درخواست برنامه گشت <span>←</span></a></div>
+  </div></section>
+</main>
+<footer class="footer"><div class="container footer-inner"><a class="brand" href="index.html#top"><span class="brand-mark"><i></i><i></i><i></i></span><span><strong>Fard Express</strong><small>TRAVEL</small></span></a><p>دروازه شما به آذربایجان</p><div class="footer-links"><a href="index.html#services">خدمات</a><a href="index.html#contact">تماس</a><a href="https://www.instagram.com/fardexpresstravel" target="_blank" rel="noopener">اینستاگرام ↗</a><a href="https://wa.me/994702906465" target="_blank" rel="noopener">واتساپ ↗</a><a href="mailto:arian.fard.4477@gmail.com">ایمیل ↗</a></div><small class="copyright">© ۲۰۲۶ Fard Express Travel</small></div></footer>
+<script src="script.js?v=7"></script>
+  <a class="wa-float" href="https://wa.me/994702906465" target="_blank" rel="noopener" aria-label="گفتگو در واتساپ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.2s-.7.9-.9 1.1c-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2s0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5s0-.4 0-.6c-.1-.2-.7-1.6-.9-2.2-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.6.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg></a>
+</body>
+</html>

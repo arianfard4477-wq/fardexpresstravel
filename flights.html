@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="رزرو بلیت پرواز رفت و برگشت باکو – ایران با Fard Express Travel؛ AZAL و Iran Airtour، و امکان ترکیب سفر هوایی و زمینی از مرز آستارا.">
+  <title>بلیت پرواز باکو – ایران | Fard Express Travel</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#075a66">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=2">
+  <style>
+    .flights-page { background: #fffdf8; }
+    .ico { width: 1em; height: 1em; fill: currentColor; display: block; }
+
+    /* Hero */
+    .fl-hero { background: #075a66; color: #fff; padding: 88px 0 96px; overflow: hidden; position: relative; }
+    .fl-hero:before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 12% 30%, rgba(255,255,255,.08), transparent 45%); pointer-events: none; }
+    .fl-hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 60px; align-items: center; position: relative; }
+    .fl-hero h1 { font-size: clamp(44px, 6vw, 78px); line-height: 1.1; margin: 0 0 20px; letter-spacing: -2px; font-weight: 800; }
+    .fl-hero h1 em { color: #e65f4c; font-style: normal; }
+    .fl-hero p { max-width: 520px; color: #d7e5df; font-size: 15px; line-height: 2.1; margin: 0 0 32px; }
+    .fl-hero .button-light:hover { background: rgba(255,255,255,.08); }
+    .fl-hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    /* Boarding pass */
+    .ticket { direction: ltr; background: #fffdf8; color: #17252b; display: grid; grid-template-columns: 1fr 118px; transform: rotate(-3deg); box-shadow: 0 30px 60px rgba(0,0,0,.28); position: relative; font-family: 'DM Sans', sans-serif; }
+    .ticket-main { padding: 22px 26px 24px; border-right: 2px dashed #d9dcd5; position: relative; }
+    .ticket-main:before, .ticket-main:after { content: ''; position: absolute; right: -11px; width: 20px; height: 20px; border-radius: 50%; background: #075a66; }
+    .ticket-main:before { top: -10px; } .ticket-main:after { bottom: -10px; }
+    .ticket-top { display: flex; justify-content: space-between; font-size: 10px; letter-spacing: 2px; color: #657277; font-weight: 600; }
+    .ticket-top b { color: #e65f4c; }
+    .ticket-route { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 14px; margin: 22px 0 20px; }
+    .ticket-city strong { display: block; font-size: 38px; line-height: 1; letter-spacing: -1px; }
+    .ticket-city small { font-size: 10px; letter-spacing: 1.5px; color: #657277; }
+    .ticket-city:last-child { text-align: right; }
+    .ticket-path { position: relative; height: 24px; display: flex; align-items: center; justify-content: center; color: #e65f4c; font-size: 22px; }
+    .ticket-path:before { content: ''; position: absolute; left: 0; right: 0; top: 50%; border-top: 2px dotted #c7cbc3; }
+    .ticket-path svg { position: relative; background: #fffdf8; padding: 0 6px; width: 34px; transform: rotate(90deg); }
+    .ticket-rows { display: grid; grid-template-columns: repeat(3, auto); justify-content: space-between; gap: 10px; border-top: 1px solid #e6e3da; padding-top: 14px; }
+    .ticket-rows span { display: block; font-size: 9px; letter-spacing: 1.5px; color: #8a9597; }
+    .ticket-rows b { font-size: 12px; }
+    .ticket-stub { padding: 22px 16px; display: flex; flex-direction: column; justify-content: space-between; background: #f6f2e9; }
+    .ticket-stub span { font-size: 9px; letter-spacing: 1.5px; color: #8a9597; }
+    .ticket-stub b { display: block; font-size: 15px; margin-top: 2px; }
+    .barcode { height: 54px; background: repeating-linear-gradient(90deg, #17252b 0 2px, transparent 2px 4px, #17252b 4px 5px, transparent 5px 8px, #17252b 8px 11px, transparent 11px 13px); }
+
+    /* Shared section bits */
+    .fl-section { padding: 110px 0; }
+    .fl-back { color: #075a66; display: inline-flex; gap: 12px; align-items: center; text-decoration: none; font-size: 12px; margin-bottom: 40px; }
+    .fl-back span { font-size: 20px; }
+    .fl-title { font-size: clamp(36px, 4.5vw, 56px); line-height: 1.2; margin: 0; letter-spacing: -1px; font-weight: 800; }
+    .fl-title em { color: #e65f4c; font-style: normal; }
+    .fl-lead { color: #5e6a6c; font-size: 14px; line-height: 2.2; margin: 0 0 14px; }
+    .fl-lead strong { color: #17252b; }
+
+    /* Airlines */
+    .fl-intro { display: grid; grid-template-columns: .9fr 1.1fr; gap: 70px; align-items: end; margin-bottom: 56px; }
+    .fl-intro .fl-lead:last-child { margin: 0; }
+    .airlines { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+    .airline { position: relative; overflow: hidden; background: #17252b; min-height: 400px; }
+    .airline img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .7s ease; }
+    .airline.azal img { object-position: center 50%; }
+    .airline.airtour img { object-position: center 30%; }
+    .airline:hover img { transform: scale(1.04); }
+    .airline:after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(8,24,30,.88) 0%, rgba(8,24,30,.25) 45%, transparent 70%); }
+    .airline-info { position: absolute; right: 0; left: 0; bottom: 0; z-index: 1; padding: 26px 28px; color: #fff; display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; }
+    .airline-info small { display: block; font: 600 10px 'DM Sans', sans-serif; letter-spacing: 2.5px; color: #f4c9a9; margin-bottom: 6px; }
+    .airline-info h3 { font: 700 26px 'DM Sans', sans-serif; margin: 0; direction: ltr; text-align: right; line-height: 1.2; }
+    .airline-info p { margin: 4px 0 0; font-size: 12px; color: #d7e5df; }
+    .airline-code { font: 700 13px 'DM Sans', sans-serif; letter-spacing: 2px; border: 1px solid rgba(255,255,255,.5); padding: 6px 10px; flex: none; }
+
+    /* Land border */
+    .border-section { background: #f6f2e9; }
+    .border-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: start; }
+    .border-copy .fl-title { margin-bottom: 22px; }
+    .routes { display: grid; gap: 14px; margin: 30px 0 0; }
+    .route-or { display: flex; align-items: center; gap: 14px; color: #8a9597; font-size: 12px; }
+    .route-or:before, .route-or:after { content: ''; flex: 1; height: 1px; background: #d9dcd5; }
+    .route-card { background: #fffdf8; padding: 20px 22px; border: 1px solid #e6e3da; transition: border-color .2s, box-shadow .2s; }
+    .route-card:hover { border-color: #e65f4c; box-shadow: 0 12px 28px rgba(23,37,43,.08); }
+    .route-card-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+    .route-card-head span { font: 700 11px 'DM Sans', sans-serif; color: #e65f4c; letter-spacing: 1px; }
+    .route-card-head b { font-size: 11px; font-weight: 600; color: #657277; }
+    .leg { display: grid; grid-template-columns: 40px auto 1fr auto; align-items: center; gap: 14px; padding: 10px 0; }
+    .leg + .leg { border-top: 1px dashed #d9dcd5; }
+    .leg-icon { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; font-size: 19px; }
+    .leg-icon.air { background: #075a66; color: #fff; }
+    .leg-icon.air svg { transform: rotate(-90deg); }
+    .leg-icon.land { background: #e65f4c; color: #fff; }
+    .leg-icon.land svg { transform: scaleX(-1); }
+    .leg-kind { font-size: 10px; color: #8a9597; white-space: nowrap; }
+    .leg-path { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 700; min-width: 0; }
+    .leg-path i { flex: 1; height: 0; border-top: 2px dotted #c7cbc3; min-width: 18px; position: relative; }
+    .leg-path i:after { content: ''; position: absolute; left: -2px; top: -5px; border: 4px solid transparent; border-right-color: #c7cbc3; border-width: 4px 6px 4px 0; }
+    .leg-mode { font-size: 11px; font-weight: 600; padding: 4px 10px; white-space: nowrap; }
+    .leg-mode.air { background: rgba(7,90,102,.1); color: #075a66; }
+    .leg-mode.land { background: rgba(230,95,76,.12); color: #c24b3a; }
+
+    .border-photo { position: relative; margin: 0; position: sticky; top: 30px; }
+    .border-photo img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 40% center; }
+    .border-photo figcaption { position: absolute; bottom: 20px; right: 20px; color: #fff; border-right: 2px solid #e65f4c; padding: 6px 12px 6px 14px; background: rgba(8,24,30,.55); backdrop-filter: blur(4px); font-size: 12px; line-height: 1.6; }
+    .border-photo figcaption span { display: block; font: 600 10px 'DM Sans', sans-serif; letter-spacing: 2px; color: #f4c9a9; direction: ltr; text-align: right; }
+    .benefit { margin-top: 30px; border-right: 2px solid #e65f4c; padding: 4px 18px 4px 0; }
+    .benefit p { margin: 0 0 14px; font-size: 13px; color: #5e6a6c; line-height: 2.1; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chips span { background: #17252b; color: #fff; font-size: 11px; padding: 6px 12px; }
+
+    /* Services */
+    .fl-services-head { display: flex; justify-content: space-between; align-items: end; gap: 40px; margin-bottom: 48px; }
+    .fl-services-head p { max-width: 320px; color: #657277; font-size: 13px; margin: 0; }
+    .fl-services { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid #d9dcd5; }
+    .fl-service { padding: 28px 24px 30px; border-bottom: 1px solid #d9dcd5; border-left: 1px solid #d9dcd5; transition: background .25s; }
+    .fl-service:nth-child(3n) { border-left: 0; }
+    .fl-service:hover { background: #f6f2e9; }
+    .fl-service-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 26px; }
+    .fl-service-top span { font: 12px 'DM Sans', sans-serif; color: #8a9597; }
+    .fl-service-top i { font: normal 26px serif; color: #e65f4c; }
+    .fl-service h3 { font-size: 18px; margin: 0; line-height: 1.6; }
+    .fl-service-top i { line-height: 0; }
+    .fl-service-top i svg { width: 28px; height: 28px; fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; transition: transform .4s cubic-bezier(.2,.7,.3,1); }
+    .fl-service:hover i svg { transform: translateY(-4px); }
+    .fl-service:hover { background: #f6f2e9; }
+
+    /* CTA */
+    .fl-cta { background: #17252b; color: #fff; padding: 80px 0; }
+    .fl-cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+    .fl-cta h2 { font-size: clamp(26px, 3.2vw, 38px); line-height: 1.5; margin: 0; max-width: 680px; font-weight: 800; }
+    .fl-cta h2 em { color: #e65f4c; font-style: normal; }
+    .fl-cta small { display: block; margin-top: 10px; color: #94a4a2; font-size: 13px; }
+
+    @media (max-width: 900px) {
+      .fl-hero-grid, .fl-intro, .border-grid { grid-template-columns: 1fr; gap: 44px; }
+      .ticket { max-width: 520px; transform: rotate(-2deg); }
+      .border-photo { position: relative; top: 0; order: -1; }
+      .border-photo img { aspect-ratio: 16 / 11; }
+    }
+    @media (max-width: 800px) {
+      .fl-hero { padding: 64px 0 76px; }
+      .fl-section { padding: 72px 0; }
+      .airlines { grid-template-columns: 1fr; }
+      .airline { min-height: 320px; }
+      .fl-services { grid-template-columns: 1fr 1fr; }
+      .fl-service:nth-child(3n) { border-left: 1px solid #d9dcd5; }
+      .fl-service:nth-child(2n) { border-left: 0; }
+      .fl-services-head, .fl-cta-inner { display: block; }
+      .fl-services-head p { margin-top: 18px; }
+      .fl-cta .button { margin-top: 28px; }
+    }
+    @media (max-width: 450px) {
+      .fl-hero h1 { font-size: 44px; }
+      .ticket { grid-template-columns: 1fr; }
+      .ticket-main { border-right: 0; border-bottom: 2px dashed #d9dcd5; }
+      .ticket-main:before, .ticket-main:after { display: none; }
+      .ticket-stub { flex-direction: row; align-items: center; gap: 16px; }
+      .barcode { height: 36px; flex: 1; }
+      .ticket-city strong { font-size: 30px; }
+      .leg { grid-template-columns: 36px 1fr auto; gap: 10px; }
+      .leg-kind { display: none; }
+      .leg-icon { width: 36px; height: 36px; }
+      .fl-services { grid-template-columns: 1fr; }
+      .fl-service, .fl-service:nth-child(3n) { border-left: 0; }
+      .airline-info { padding: 20px; }
+      .airline-info h3 { font-size: 21px; }
+    }
+  </style>
+</head>
+<body class="flights-page">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-plane" viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/></symbol>
+    <symbol id="i-van" viewBox="0 0 24 24"><path d="M2 7a2 2 0 0 1 2-2h10a1 1 0 0 1 1 1v2h3.2a1 1 0 0 1 .8.4l2.8 3.7a1 1 0 0 1 .2.6V16a1 1 0 0 1-1 1h-1.2a2.8 2.8 0 0 0-5.6 0H9.8a2.8 2.8 0 0 0-5.6 0H3a1 1 0 0 1-1-1zm13 3v3h5l-2.2-3zM4.5 7.5v3h3.5v-3zm5 0v3H13v-3z"/><circle cx="7" cy="17.3" r="1.8"/><circle cx="17" cy="17.3" r="1.8"/></symbol>
+    <symbol id="i-swap" viewBox="0 0 24 24"><path d="M3.5 8.5h16l-3.4-3.4M20.5 15.5h-16l3.4 3.4"/></symbol>
+    <symbol id="i-oneway" viewBox="0 0 24 24"><path d="M20.5 12h-17M9.2 5.8 3 12l6.2 6.2"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><path d="M12 6.8v5.4l3.4 2"/></symbol>
+    <symbol id="i-mix" viewBox="0 0 24 24"><path d="M3.5 7h4.8l3 5h4.4M3.5 17h4.8l1.7-2.8M16.2 9.2 19.8 12l-3.6 2.8"/></symbol>
+    <symbol id="i-border" viewBox="0 0 24 24"><path d="M2.5 20.5h19M6.2 20.5V4.8"/><path d="M6.2 6h12l-1.8 2.4L18.2 11h-12z"/></symbol>
+    <symbol id="i-support" viewBox="0 0 24 24"><path d="M4.6 14.2v-2a7.4 7.4 0 0 1 14.8 0v2"/><rect x="2.6" y="13.2" width="3.8" height="5.8" rx="1.8"/><rect x="17.6" y="13.2" width="3.8" height="5.8" rx="1.8"/><path d="M19.5 19v.4a2.6 2.6 0 0 1-2.6 2.6H13.4"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html#top" aria-label="Fard Express Travel"><span class="brand-mark"><i></i><i></i><i></i></span><span><strong>Fard Express</strong><small>TRAVEL</small></span></a>
+      <nav class="main-nav" aria-label="ناوبری اصلی"><a href="index.html#services">خدمات ما</a><a href="index.html#events">رویدادهای باکو</a><a href="index.html#why-us">چرا فرد اکسپرس؟</a><a href="index.html#destinations">باکو را کشف کنید</a><a href="index.html#contact">تماس با ما</a></nav>
+      <a class="nav-cta" href="index.html#contact">مشاوره رایگان <span>↗</span></a>
+      <button class="menu-toggle" aria-label="باز کردن منو" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="fl-hero">
+      <div class="container fl-hero-grid">
+        <div>
+          <div class="eyebrow light"><span></span> رفت و برگشت · یک‌طرفه · ترکیبی</div>
+          <h1>بلیت پرواز<br><em>باکو ⇄ ایران.</em></h1>
+          <p>رزرو بلیت بین باکو و شهرهای مختلف ایران، با انتخاب بهترین مسیر و زمان پرواز؛ هوایی، زمینی یا ترکیبی از هر دو.</p>
+          <div class="fl-hero-actions">
+            <a class="button button-primary" href="index.html#contact">استعلام قیمت <span>←</span></a>
+            <a class="button button-light" href="#land-border">سفر ترکیبی <span>↓</span></a>
+          </div>
+        </div>
+        <div class="ticket" aria-hidden="true">
+          <div class="ticket-main">
+            <div class="ticket-top"><span>FARD EXPRESS · BOARDING PASS</span><b>ROUND TRIP</b></div>
+            <div class="ticket-route">
+              <div class="ticket-city"><strong>GYD</strong><small>BAKU</small></div>
+              <div class="ticket-path"><svg class="ico"><use href="#i-plane"/></svg></div>
+              <div class="ticket-city"><strong>IRAN</strong><small>ALL CITIES</small></div>
+            </div>
+            <div class="ticket-rows">
+              <div><span>AIRLINE</span><b>AZAL · IRAN AIRTOUR</b></div>
+              <div><span>TYPE</span><b>RT / OW</b></div>
+              <div><span>OPTION</span><b>AIR + LAND</b></div>
+            </div>
+          </div>
+          <div class="ticket-stub">
+            <div><span>CLASS</span><b>ECONOMY</b></div>
+            <div><span>GATE</span><b>FX</b></div>
+            <div class="barcode"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fl-section">
+      <div class="container">
+        <a class="fl-back" href="index.html#services"><span>→</span> بازگشت به خدمات</a>
+        <div class="fl-intro">
+          <div>
+            <div class="eyebrow"><span></span> رفت و برگشت</div>
+            <h2 class="fl-title">بلیت پرواز<br><em>باکو – ایران</em></h2>
+          </div>
+          <div>
+            <p class="fl-lead">با خدمات رزرو بلیت پرواز، می‌توانید بلیت <strong>رفت و برگشت بین باکو و شهرهای مختلف ایران</strong> را با توجه به تاریخ و مسیر موردنظر خود رزرو کنید.</p>
+            <p class="fl-lead">امکان تهیه بلیت از شرکت‌های هواپیمایی مختلف از جمله <strong>AZAL (Azerbaijan Airlines)</strong> و <strong>Iran Airtour</strong> فراهم است.</p>
+          </div>
+        </div>
+        <div class="airlines">
+          <article class="airline azal reveal">
+            <img src="parvaz/azal.JPG" alt="هواپیمای بوئینگ ۷۸۷ هواپیمایی آذربایجان (AZAL) در حال پرواز" loading="lazy">
+            <div class="airline-info">
+              <div><small>AZAL</small><h3>Azerbaijan Airlines</h3><p>هواپیمایی ملی آذربایجان</p></div>
+              <span class="airline-code">J2</span>
+            </div>
+          </article>
+          <article class="airline airtour reveal">
+            <img src="parvaz/iran%20airtour.JPG" alt="هواپیمای ایرباس A310 ایران ایرتور" loading="lazy">
+            <div class="airline-info">
+              <div><small>IRAN AIRTOUR</small><h3>Iran Airtour</h3><p>هواپیمایی ایران ایرتور</p></div>
+              <span class="airline-code">B9</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="fl-section border-section" id="land-border">
+      <div class="container border-grid">
+        <div class="border-copy">
+          <div class="eyebrow"><span></span> ترکیب سفر هوایی و زمینی</div>
+          <h2 class="fl-title">سفر به ایران<br><em>از طریق مرز زمینی.</em></h2>
+          <p class="fl-lead">در صورتی که تمایل داشته باشید <strong>مسیر رفت یا برگشت را ترکیبی</strong> انجام دهید، امکان برنامه‌ریزی سفر به این شکل نیز وجود دارد:</p>
+
+          <div class="routes">
+            <div class="route-card reveal">
+              <div class="route-card-head"><span>OPTION 01</span><b>رفت هوایی، برگشت زمینی</b></div>
+              <div class="leg">
+                <span class="leg-icon air"><svg class="ico"><use href="#i-plane"/></svg></span>
+                <span class="leg-kind">رفت</span>
+                <span class="leg-path">ایران <i></i> باکو</span>
+                <span class="leg-mode air">با پرواز</span>
+              </div>
+              <div class="leg">
+                <span class="leg-icon land"><svg class="ico"><use href="#i-van"/></svg></span>
+                <span class="leg-kind">برگشت</span>
+                <span class="leg-path">باکو <i></i> ایران</span>
+                <span class="leg-mode land">مرز زمینی</span>
+              </div>
+            </div>
+            <div class="route-or">یا</div>
+            <div class="route-card reveal">
+              <div class="route-card-head"><span>OPTION 02</span><b>رفت و برگشت هوایی</b></div>
+              <div class="leg">
+                <span class="leg-icon air"><svg class="ico"><use href="#i-plane"/></svg></span>
+                <span class="leg-kind">رفت</span>
+                <span class="leg-path">ایران <i></i> باکو</span>
+                <span class="leg-mode air">با پرواز</span>
+              </div>
+              <div class="leg">
+                <span class="leg-icon air"><svg class="ico"><use href="#i-plane"/></svg></span>
+                <span class="leg-kind">برگشت</span>
+                <span class="leg-path">باکو <i></i> ایران</span>
+                <span class="leg-mode air">با پرواز</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="benefit">
+            <p>این گزینه می‌تواند برای مسافرانی که به دنبال موارد زیر هستند، گزینه مناسبی باشد:</p>
+            <div class="chips"><span>انعطاف بیشتر در برنامه سفر</span><span>انتخاب مسیر مناسب‌تر</span><span>مدیریت هزینه‌های سفر</span></div>
+          </div>
+        </div>
+        <figure class="border-photo">
+          <img src="parvaz/web/astara%20border.jpg" alt="پایانه مرزی مسافری بندر آستارا" loading="lazy">
+          <figcaption><span>ASTARA BORDER TERMINAL</span>پایانه مرزی آستارا</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="fl-section">
+      <div class="container">
+        <div class="fl-services-head">
+          <div><div class="eyebrow"><span></span> از استعلام تا بازگشت</div><h2 class="fl-title">خدمات <em>ما</em></h2></div>
+          <p>همه‌چیز برای یک برنامه پروازی دقیق؛ از انتخاب مسیر تا هماهنگی بازگشت.</p>
+        </div>
+        <div class="fl-services">
+          <div class="fl-service reveal"><div class="fl-service-top"><span>۰۱</span><i><svg viewBox="0 0 24 24"><use href="#i-swap"/></svg></i></div><h3>رزرو بلیت رفت و برگشت</h3></div>
+          <div class="fl-service reveal"><div class="fl-service-top"><span>۰۲</span><i><svg viewBox="0 0 24 24"><use href="#i-oneway"/></svg></i></div><h3>رزرو بلیت یک‌طرفه</h3></div>
+          <div class="fl-service reveal"><div class="fl-service-top"><span>۰۳</span><i><svg viewBox="0 0 24 24"><use href="#i-clock"/></svg></i></div><h3>انتخاب بهترین مسیر و زمان پرواز</h3></div>
+          <div class="fl-service reveal"><div class="fl-service-top"><span>۰۴</span><i><svg viewBox="0 0 24 24"><use href="#i-mix"/></svg></i></div><h3>امکان ترکیب سفر هوایی و زمینی</h3></div>
+          <div class="fl-service reveal"><div class="fl-service-top"><span>۰۵</span><i><svg viewBox="0 0 24 24"><use href="#i-border"/></svg></i></div><h3>هماهنگی مسیر بازگشت از طریق مرز زمینی</h3></div>
+          <div class="fl-service reveal"><div class="fl-service-top"><span>۰۶</span><i><svg viewBox="0 0 24 24"><use href="#i-support"/></svg></i></div><h3>پشتیبانی و راهنمایی مسافر در طول برنامه‌ریزی سفر</h3></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fl-cta">
+      <div class="container fl-cta-inner">
+        <div>
+          <h2>برای بررسی مسیر و قیمت، <em>تاریخ رفت و برگشت</em> خود را برای ما ارسال کنید.</h2>
+          <small>کارشناسان ما بهترین گزینه‌های پروازی و ترکیبی را برایتان پیشنهاد می‌دهند.</small>
+        </div>
+        <a class="button button-primary" href="index.html#contact">ارسال تاریخ سفر <span>←</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container footer-inner"><a class="brand" href="index.html#top"><span class="brand-mark"><i></i><i></i><i></i></span><span><strong>Fard Express</strong><small>TRAVEL</small></span></a><p>دروازه شما به آذربایجان</p><div class="footer-links"><a href="index.html#services">خدمات</a><a href="index.html#contact">تماس</a><a href="https://www.instagram.com/fardexpresstravel" target="_blank" rel="noopener">اینستاگرام ↗</a><a href="https://wa.me/994702906465" target="_blank" rel="noopener">واتساپ ↗</a><a href="mailto:arian.fard.4477@gmail.com">ایمیل ↗</a></div><small class="copyright">© ۲۰۲۶ Fard Express Travel</small></div></footer>
+  <script src="script.js?v=7"></script>
+  <a class="wa-float" href="https://wa.me/994702906465" target="_blank" rel="noopener" aria-label="گفتگو در واتساپ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.2s-.7.9-.9 1.1c-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2s0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5s0-.4 0-.6c-.1-.2-.7-1.6-.9-2.2-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.6.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg></a>
+</body>
+</html>

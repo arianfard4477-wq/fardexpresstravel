@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="فهرست هتل های منتخب Fard Express Travel در باکو.">
+  <title>هتل های باکو | Fard Express Travel</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#075a66">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=2">
+  <style>
+    .hotels-page { background: #fffdf8; min-height: 100vh; }
+    .hotels-hero { background: #075a66; color: white; padding: 92px 0 82px; }
+    .hotels-hero h1 { font-size: clamp(46px, 6vw, 76px); line-height: 1.1; margin: 0 0 18px; letter-spacing: -2px; }
+    .hotels-hero h1 em { color: #e65f4c; font-style: normal; }
+    .hotels-hero p { max-width: 520px; color: #d7e5df; font-size: 14px; margin: 0; }
+    .hotels-page-main { padding: 82px 0 110px; }
+    .hotel-back { color: #075a66; display: inline-flex; gap: 12px; align-items: center; text-decoration: none; font-size: 12px; margin-bottom: 36px; }
+    .hotel-back span { font-size: 20px; }
+    .hotel-group { margin-top: 76px; }
+    .hotel-group:first-of-type { margin-top: 0; }
+    .hotel-group-title { display: flex; align-items: center; gap: 16px; margin-bottom: 26px; border-bottom: 1px solid #d9dcd5; padding-bottom: 14px; }
+    .hotel-group-title span { font: 700 13px 'DM Sans', sans-serif; color: white; background: #e65f4c; padding: 7px 12px; }
+    .hotel-group-title b { font-size: 13px; color: #657277; font-weight: 500; }
+    .hotel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px 24px; }
+    .hotel-grid--premium { grid-template-columns: repeat(2, 1fr); }
+    .hotel-card { background: #f6f2e9; min-width: 0; display: flex; flex-direction: column; transition: transform .2s, box-shadow .2s; }
+    .hotel-card:hover { transform: translateY(-4px); box-shadow: 0 14px 34px rgba(23,37,43,.12); }
+    .hotel-card img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; object-position: center; background: #e6e2d8; }
+    .hotel-grid--premium .hotel-card img { aspect-ratio: 16 / 9; }
+    /* Per-photo framing so the sign / facade stays in view */
+    .hotel-card img[src$="krone.jpg"] { object-position: center 15%; }
+    .hotel-card img[src$="safran.webp"] { object-position: center 60%; }
+    .hotel-card img[src$="qafqaz-city.webp"] { object-position: center 60%; }
+    .hotel-card img[src$="mildom.jpg"] { object-position: center 65%; }
+    .hotel-card img[src$="marriott.jpg"] { object-position: center 90%; }
+    .hotel-info { padding: 22px 24px 24px; flex: 1; display: flex; flex-direction: column; }
+    .hotel-info .hotel-links { margin-top: auto; }
+    .hotel-stars { font: 12px 'DM Sans', sans-serif; letter-spacing: 2px; color: #e65f4c; direction: ltr; text-align: right; }
+    .hotel-info h2 { font: 700 19px 'DM Sans', sans-serif; margin: 8px 0 4px; direction: ltr; text-align: right; color: #17252b; }
+    .hotel-address { font: 11px 'DM Sans', sans-serif; color: #6d7a7d; direction: ltr; text-align: right; min-height: 38px; margin: 0 0 16px; line-height: 1.7; }
+    .hotel-links { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .hotel-links a { color: #075a66; font-size: 11px; text-decoration: none; font-weight: 600; }
+    .hotel-links a span { font-size: 18px; margin-right: 9px; }
+    .hotel-links .official-link { border: 1px solid #b9c4c0; padding: 7px 9px; font-size: 10px; }
+    .hotels-note { border-right: 2px solid #e65f4c; padding: 12px 16px; margin-top: 64px; color: #657277; font-size: 11px; }
+    @media (max-width: 800px) { .hotels-hero { padding: 70px 0 62px; } .hotels-page-main { padding: 60px 0 80px; } .hotel-grid { grid-template-columns: repeat(2, 1fr); gap: 20px 16px; } .hotel-info { padding: 16px 16px 18px; } .hotel-info h2 { font-size: 16px; } .hotel-links { align-items: stretch; flex-direction: column; } .hotel-links .official-link { text-align: center; } }
+    @media (max-width: 450px) { .hotel-grid { grid-template-columns: 1fr; gap: 22px; } .hotel-info { padding: 18px 18px 20px; } .hotel-group { margin-top: 52px; } }
+  </style>
+</head>
+<body class="hotels-page">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html#top" aria-label="Fard Express Travel"><span class="brand-mark"><i></i><i></i><i></i></span><span><strong>Fard Express</strong><small>TRAVEL</small></span></a>
+      <nav class="main-nav" aria-label="ناوبری اصلی"><a href="index.html#services">خدمات ما</a><a href="index.html#events">رویدادهای باکو</a><a href="index.html#why-us">چرا فرد اکسپرس؟</a><a href="index.html#destinations">باکو را کشف کنید</a><a href="index.html#contact">تماس با ما</a></nav>
+      <a class="nav-cta" href="index.html#contact">مشاوره رایگان <span>↗</span></a>
+      <button class="menu-toggle" aria-label="باز کردن منو" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hotels-hero"><div class="container"><div class="eyebrow light"><span></span> اقامت در باکو</div><h1>هتل مناسب<br><em>سفر شما.</em></h1><p>هتل های منتخب باکو را بر اساس سطح اقامت، موقعیت و نیاز مسافران شما بررسی کنید. برای رزرو یا دریافت نرخ همکاری با ما تماس بگیرید.</p></div></section>
+    <section class="hotels-page-main"><div class="container">
+      <a class="hotel-back" href="index.html#services"><span>→</span> بازگشت به خدمات</a>
+
+      <div class="hotel-group"><div class="hotel-group-title"><span>۳ ستاره</span><b>اقامت هوشمند</b></div><div class="hotel-grid">
+          <article class="hotel-card reveal"><img src="photo/hotels/alba.webp" alt="Alba Hotel" loading="lazy"><div class="hotel-info"><div class="hotel-stars">★★★☆☆</div><h2>Alba Hotel</h2><p class="hotel-address">3/28 Ahmad Rajabli, Baku 1075</p><div class="hotel-links"><a href="index.html#contact">درخواست رزرو <span>←</span></a><a class="official-link" href="https://www.albahotel.az/" target="_blank" rel="noopener">سایت رسمی ↗</a></div></div></article>
+        <article class="hotel-card reveal"><img src="photo/hotels/krone.jpg" alt="Krone Hotel" loading="lazy"><div class="hotel-info"><div class="hotel-stars">★★★☆☆</div><h2>Krone Hotel</h2><p class="hotel-address">Hasan Aliyev Street, Baku</p><div class="hotel-links"><a href="index.html#contact">درخواست رزرو <span>←</span></a><a class="official-link" href="https://www.google.com/search?q=krone+hotel+baku" target="_blank" rel="noopener">مشاهده هتل ↗</a></div></div></article>
+        <article class="hotel-card reveal"><img src="photo/hotels/grand-midway.jpg" alt="Grand Midway Hotel" loading="lazy"><div class="hotel-info"><div class="hotel-stars">★★★☆☆</div><h2>Grand Midway Hotel</h2><p class="hotel-address">Zarifa Aliyeva Street, Baku</p><div class="hotel-links"><a href="index.html#contact">درخواست رزرو <span>←</span></a><a class="official-link" href="https://www.google.com/search?q=grand+midway+hotel+baku" target="_blank" rel="noopener">مشاهده هتل ↗</a></div></div></article>
+      </div></div>
+
+      <div class="hotel-group"><div class="hotel-group-title"><span>۴ ستاره</span><b>آرامش و کیفیت</b></div><div class="hotel-grid">
+        <article class="hotel-card reveal"><img src="photo/hotels/safran.webp" alt="Safran Hotel" loading="lazy"><div class="hotel-info"><div class="hotel-stars">★★★★☆</div><h2>Safran Hotel</h2><p class="hotel-address">282 Jeyhun Hajibeyli Street, Baku</p><div class="hotel-links"><a href="index.html#contact">درخواست رزرو <span>←</span></a><a class="official-link" href="https://safranhotel.az/en-gb/" target="_blank" rel="noopener">سایت رسمی ↗</a></div></div></article>
+        <article class="hotel-card reveal"><img src="photo/hotels/mildom.jpg" alt="Mildom Hotel" loading="lazy"><div class="hotel-info"><div class="hotel-stars">★★★★☆</div><h2>Mildom Hotel</h2><p class="hotel-address">Close to 28 May Metro Station, Baku</p><div class="hotel-links"><a href="index.html#contact">درخواست رزرو <span>←</span></a><a class="official-link" href="https://mildomhotel.az/" target="_blank" rel="noopener">سایت رسمی ↗</a></div></div></article>
+        <article class="hotel-card reveal"><img src="photo/hotels/adisson.png" alt="Adisson Hotel" loading="lazy"><div class="hotel-info"><div class="hotel-stars">★★★★☆</div><h2>Adisson Hotel</h2><p class="hotel-address">Azadlig Avenue 116A, Baku</p><div class="hotel-links"><a href="index.html#contact">درخواست رزرو <span>←</span></a><a class="official-link" href="https://adissonbaku.com/en/" target="_blank" rel="noopener">سایت رسمی ↗</a></div></div></article>
+        <article class="hotel-card reveal"><img src="photo/hotels/grand-europe.webp" alt="Grand Europe Hotel" loading="lazy"><div class="hotel-info"><div class="hotel-stars">★★★★☆</div><h2>Grand Europe Hotel</h2><p class="hotel-address">Tbilisi Avenue 22, Baku</p><div class="hotel-links"><a href="index.html#contact">درخواست رزرو <span>←</span></a><a class="official-link" href="https://grand-europe.az/" target="_blank" rel="noopener">سایت رسمی ↗</a></div></div></article>
+        <article class="hotel-card reveal"><img src="photo/hotels/qafqaz-city.webp" alt="Qafqaz City Hotel" loading="lazy"><div class="hotel-info"><div class="hotel-stars">★★★★☆</div><h2>Qafqaz City Hotel</h2><p class="hotel-address">Tbilisi Avenue 34, Nasimi district, Baku</p><div class="hotel-links"><a href="index.html#contact">درخواست رزرو <span>←</span></a><a class="official-link" href="https://qbch.az/en-gb/" target="_blank" rel="noopener">سایت رسمی ↗</a></div></div></article>
+        <article class="hotel-card reveal"><img src="photo/hotels/qafqaz-sahil.webp" alt="Qafqaz Sahil Hotel" loading="lazy"><div class="hotel-info"><div class="hotel-stars">★★★★☆</div><h2>Qafqaz Sahil Hotel</h2><p class="hotel-address">Khagani Rustamov Street, Baku</p><div class="hotel-links"><a href="index.html#contact">درخواست رزرو <span>←</span></a><a class="official-link" href="https://qshb.az/" target="_blank" rel="noopener">سایت رسمی ↗</a></div></div></article>
+        <article class="hotel-card reveal"><img src="photo/hotels/irish.webp" alt="Irish Hotel" loading="lazy"><div class="hotel-info"><div class="hotel-stars">★★★★☆</div><h2>Irish Hotel</h2><p class="hotel-address">Salatin Askerova 176, Baku</p><div class="hotel-links"><a href="index.html#contact">درخواست رزرو <span>←</span></a><a class="official-link" href="https://irishotelbaku.com/ru-ru/" target="_blank" rel="noopener">سایت رسمی ↗</a></div></div></article>
+      </div></div>
+
+      <div class="hotel-group"><div class="hotel-group-title"><span>۵ ستاره</span><b>تجربه ممتاز</b></div><div class="hotel-grid hotel-grid--premium">
+        <article class="hotel-card reveal"><img src="photo/hotels/marriott.jpg" alt="Baku Marriott Hotel Boulevard" loading="lazy"><div class="hotel-info"><div class="hotel-stars">★★★★★</div><h2>Baku Marriott Hotel Boulevard</h2><p class="hotel-address">Khagani Rustamov Street 4C, Baku</p><div class="hotel-links"><a href="index.html#contact">درخواست رزرو <span>←</span></a><a class="official-link" href="https://www.marriott.com/en-us/hotels/gydmb-baku-marriott-hotel-boulevard/overview/" target="_blank" rel="noopener">سایت رسمی ↗</a></div></div></article>
+        <article class="hotel-card reveal"><img src="photo/hotels/hilton.jpg" alt="Hilton Baku" loading="lazy"><div class="hotel-info"><div class="hotel-stars">★★★★★</div><h2>Hilton Baku</h2><p class="hotel-address">Azadliq Square 1B, Baku</p><div class="hotel-links"><a href="index.html#contact">درخواست رزرو <span>←</span></a><a class="official-link" href="https://www.hilton.com/en/hotels/gydhbhi-hilton-baku/" target="_blank" rel="noopener">سایت رسمی ↗</a></div></div></article>
+      </div></div>
+      <p class="hotels-note">تصاویر هتل ها از گالری رسمی سایت هتل ها استفاده شده است؛ برای Krone، Grand Midway، Marriott و Hilton از تصویر جایگزین استفاده شده و کارت ها به صفحه رسمی یا صفحه معرفی هتل متصل هستند.</p>
+    </div></section>
+  </main>
+
+  <footer class="footer"><div class="container footer-inner"><a class="brand" href="index.html#top"><span class="brand-mark"><i></i><i></i><i></i></span><span><strong>Fard Express</strong><small>TRAVEL</small></span></a><p>دروازه شما به آذربایجان</p><div class="footer-links"><a href="index.html#services">خدمات</a><a href="index.html#contact">تماس</a><a href="https://www.instagram.com/fardexpresstravel" target="_blank" rel="noopener">اینستاگرام ↗</a><a href="https://wa.me/994702906465" target="_blank" rel="noopener">واتساپ ↗</a><a href="mailto:arian.fard.4477@gmail.com">ایمیل ↗</a></div><small class="copyright">© ۲۰۲۶ Fard Express Travel</small></div></footer>
+  <script src="script.js?v=7"></script>
+  <a class="wa-float" href="https://wa.me/994702906465" target="_blank" rel="noopener" aria-label="گفتگو در واتساپ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.2s-.7.9-.9 1.1c-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2s0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5s0-.4 0-.6c-.1-.2-.7-1.6-.9-2.2-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.6.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg></a>
+</body>
+</html>

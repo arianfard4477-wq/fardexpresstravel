@@ -1,0 +1,17 @@
+# Local preview server config
+.claude/
+
+# Source media kept out of the repo: GitHub rejects files over 100MB and these are
+# only masters. The optimised copies under */web/ are what the site actually loads.
+background/
+aks/IMG_5303.PNG
+aks/formula 1/formula 1 qala.JPG
+aks/formula 1/formula 1 azneft.JPG
+aks/formula 1/time.png
+photo/background.jpg
+parvaz/astara border.PNG
+transfer/*.jpeg
+gasht shahri/*.jpg
+gasht shahri/*.JPG
+gasht shahri/*.png
+هتل/
