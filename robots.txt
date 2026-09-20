@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Source media and local tooling are not part of the public site
+Disallow: /.claude/
+
+Sitemap: https://www.fardexpresstravel.com/sitemap.xml
